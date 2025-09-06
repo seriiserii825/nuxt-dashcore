@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import {admin_menu} from '~/data/menu/admin_menu';
-
+import { admin_menu } from "~/data/menu/admin_menu";
 </script>
 
 <template>
@@ -16,8 +15,11 @@ import {admin_menu} from '~/data/menu/admin_menu';
 </template>
 <style scoped lang="scss">
 .admin-sidebar {
-  padding: 3.2rem;
+  padding: 3.2rem 0;
   height: 100%;
   background-color: #26374c;
+  &__logo {
+    margin-bottom: 3.2rem;
+  }
 }
 </style>

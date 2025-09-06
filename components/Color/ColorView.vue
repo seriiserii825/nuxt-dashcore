@@ -14,7 +14,7 @@
       <ColorItem color="admin-bg" hex="#f5f8fa"/>
       <ColorItem color="admin-bg-darken" hex="#e4e9ec"/>
       <ColorItem color="text-color" hex="#212529"/>
-      <ColorItem color="text-color-light" hex="#636b6f"/>
+      <ColorItem color="text-white" hex="rgba(255,255,255,.45)"/>
     </ul>
   </div>
 </template>
