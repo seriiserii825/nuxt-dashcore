@@ -1,0 +1,2 @@
+create all pages from admin menu
+finish admin menu styling
