@@ -1,6 +1,8 @@
 <template>
   <div class="admin">
-    <div class="admin__sidebar"></div>
+    <div class="admin__sidebar">
+      <AdminSidebar />
+    </div>
     <div class="admin__main">
       <div class="admin__topbar"></div>
       <div class="admin__content">
