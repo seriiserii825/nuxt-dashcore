@@ -3,6 +3,9 @@
 <template>
   <div class="admin-sidebar">
     <img src="/images/app_header_logo.png" alt="" class="admin-sidebar__logo" />
+    <FontAwesomeIcon :icon="['fas', 'coffee']" />
+    <FontAwesomeIcon :icon="['far', 'address-book']" />
+    <FontAwesomeIcon :icon="['fab', 'github']" />
   </div>
 </template>
 <style scoped lang="scss">
