@@ -59,7 +59,9 @@ img {
   height: auto;
 }
 ul {
-  @include reset-list;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 p {
   margin: 0;
