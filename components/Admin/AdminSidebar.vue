@@ -1,11 +1,17 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import {admin_menu} from '~/data/menu/admin_menu';
+
+</script>
 
 <template>
   <div class="admin-sidebar">
     <img src="/images/app_header_logo.png" alt="" class="admin-sidebar__logo" />
-    <FontAwesomeIcon :icon="['fas', 'coffee']" />
-    <FontAwesomeIcon :icon="['far', 'address-book']" />
-    <FontAwesomeIcon :icon="['fab', 'github']" />
+    <!-- <FontAwesomeIcon :icon="['fas', 'coffee']" /> -->
+    <nav class="main-menu">
+      <ul class="menu-list">
+        <MenuItem v-for="(item, i) in admin_menu" :key="i" :item="item" />
+      </ul>
+    </nav>
   </div>
 </template>
 <style scoped lang="scss">
