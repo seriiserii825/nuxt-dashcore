@@ -2,34 +2,43 @@ import type { MenuNode } from "~/components/Menu/MenuItem.vue";
 
 export const admin_menu: MenuNode[] = [
   {
-    label: "Products",
-    icon: ["fas", "box"],
+    label: "ADMIN",
+    icon: ["fas", "gear"],
     children: [
       {
-        label: "Speakers",
-        icon: ["fas", "volume-high"],
+        label: "Utenti",
+        icon: ["faw", "fa-user"],
+        to: "/admin/core_users",
+      },
+      {
+        label: "Menu",
+        icon: ["faw", "list-alt"],
         children: [
-          { label: "Opera Line", to: "/products/opera", icon: ["fas", "music"] },
-          { label: "Classic Line", to: "/products/classic", icon: ["fas", "record-vinyl"] },
+          { label: "Pagine", to: "/admin/core_menus", icon: ["fa", "folder-open"] },
+          { label: "Autorizzazioni", to: "/admin/core_permissions_general", icon: ["fa", "unlock-alt"] },
+          { label: "Eccezioni", to: "/admin/core_permissions_exceptions", icon: ["fa", "fa-asterisk"] },
         ],
       },
       {
-        label: "Accessories",
-        icon: ["fas", "plug"],
+        label: "Indirizzi",
+        icon: ["faw", "fa-envelope"],
         children: [
-          { label: "Cables", to: "/products/cables", icon: ["fas", "bolt"] },
-          { label: "Stands", to: "/products/stands", icon: ["fas", "grip-lines"] },
+          { label: "Nazioni", to: "/admin/core_countries", icon: ["faw", "fa-globe"] },
+          { label: "Province", to: "/admin/core_provinces", icon: ["fa", "fa-map-marker"] },
+          { label: "Comuni", to: "/admin/core_cities", icon: ["fa", "fa-university"] },
         ],
+      },
+      {
+        label: "Admin options",
+        icon: ["faw", "fa-paperclip"],
+        to: "/admin/core_admin_options",
       },
     ],
   },
   {
-    label: "About",
-    icon: ["fas", "circle-info"],
-    children: [
-      { label: "Story", to: "/about/story", icon: ["fas", "book-open"] },
-      { label: "Team", to: "/about/team", icon: ["fas", "users"] },
-    ],
+    label: "Clienti",
+    icon: ["fas", "fa-users"],
+    to: "/admin/core_customers",
   },
   { label: "Blog", to: "/blog", icon: ["fas", "rss"] },
   { label: "Contact", to: "/contact", icon: ["fas", "envelope"] },

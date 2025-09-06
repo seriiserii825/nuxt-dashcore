@@ -83,6 +83,21 @@ function toggle() {
   width: 100%;
   font-size: 1.8rem;
   color: var(--text-light);
+  &.menu-item--open {
+    & > .menu-item__button {
+      color: white;
+    }
+    .menu-item__link {
+      &.router-link-exact-active {
+        color: white;
+      }
+    }
+  }
+  &.menu-item--depth-0 > .menu-item__link--leaf.router-link-exact-active {
+    color: white;
+  }
+  &.menu-item--depth-0 > .menu-item__link--leaf,
+  .menu-item--depth-1 > .menu-item__link,
   &__button {
     display: flex;
     padding: 0.8rem 3.2rem;
