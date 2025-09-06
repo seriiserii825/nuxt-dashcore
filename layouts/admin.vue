@@ -26,11 +26,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: #f5f8fa;
-  }
-  &__topbar {
-    height: 60px;
-    flex-shrink: 0;
+    background: var(--admin-bg);
   }
   &__content {
     flex: 1;

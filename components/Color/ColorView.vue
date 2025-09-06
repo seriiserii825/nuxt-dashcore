@@ -8,9 +8,10 @@ const code = `
   --success-hover: #008d4c;
   --error: #dd4b39;
   --error-hover: #d73925;
+  --admin-bg: #f5f8fa;
+  --admin-bg-darken: #e4e9ec;
   --text-color: #212529;
   --text-color-light: #636b6f;
-  --font-1: "Source Sans Pro", sans-serif;
 }
 `;
 
@@ -19,7 +20,9 @@ const code = `
 <template>
   <div class="color-view">
     <SectionHeader title="Colors"/>
-    <pre><code>{{ code }}</code></pre>
+    <CodePreview className="css" class="mb-16">
+      {{ code }}
+    </CodePreview>
     <ul class="colors__list">
       <ColorItem color="accent"/>
       <ColorItem color="accent-hover"/>
@@ -28,6 +31,8 @@ const code = `
       <ColorItem color="success-hover"/>
       <ColorItem color="error"/>
       <ColorItem color="error-hover"/>
+      <ColorItem color="admin-bg"/>
+      <ColorItem color="admin-bg-darken"/>
       <ColorItem color="text-color"/>
       <ColorItem color="text-color-light"/>
     </ul>
