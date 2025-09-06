@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
 import { NuxtLink } from "#components";
+const { el, slideToggle } = useSlideToggle(400);
 
 export type MenuNode = {
   label: string;
@@ -27,6 +28,7 @@ const canHaveDropdown = computed(() => !isLeaf.value && props.depth < 2);
 
 function toggle() {
   if (canHaveDropdown.value) {
+    slideToggle(el);
     isOpen.value = !isOpen.value;
   }
 }
@@ -65,9 +67,10 @@ function toggle() {
 
       <!-- Dropdown -->
       <ul
-        v-if="isOpen"
+        style="display: none"
         class="menu-item__submenu"
         :class="[`menu-item__submenu--level-${depth + 1}`]"
+        ref="el"
         role="menu">
         <MenuItem
           v-for="(child, idx) in item.children"
@@ -116,12 +119,23 @@ function toggle() {
   &__submenu {
     display: flex;
     flex-direction: column;
-    padding: 1.6rem 0 1.6rem 1.6rem;
+    padding-left: 1.6rem;
     background: #182330;
+    > .menu-item {
+      &:first-of-type {
+        padding-top: 1.6rem;
+      }
+      &:last-of-type {
+        padding-bottom: 1.6rem;
+      }
+      &:not(:last-of-type) {
+        margin-bottom: 1.6rem;
+      }
+    }
     .menu-item__submenu {
       display: flex;
       flex-direction: column;
-      gap: 1.6rem;
+      gap: 3.2rem;
       padding-left: 5.4rem;
     }
   }

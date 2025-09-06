@@ -39,7 +39,5 @@ export const admin_menu: MenuNode[] = [
     label: "Clienti",
     icon: ["fas", "fa-users"],
     to: "/admin/core_customers",
-  },
-  { label: "Blog", to: "/blog", icon: ["fas", "rss"] },
-  { label: "Contact", to: "/contact", icon: ["fas", "envelope"] },
+  }
 ];
