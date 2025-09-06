@@ -20,6 +20,7 @@ import { admin_menu } from "~/data/menu/admin_menu";
   background-color: #26374c;
   &__logo {
     margin-bottom: 3.2rem;
+    padding: 0 3.2rem;
   }
 }
 </style>
