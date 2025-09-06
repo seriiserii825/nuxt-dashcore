@@ -1,17 +1,16 @@
 <script setup>
 const code = `
 :root {
-	--accent: #65B244;
-	--accent-hover: #a86078;
-	--contrast: #f16529;
-	--contrast-hover: #fa7134;
-	--dark-bg: #444;
-	--dark-bg-darken: #333;
-	--primary: #0d7296;
-	--primary-hover: #0f8dbb;
-	--success: #139b2d;
-	--success-hover: #19c73a;
-	--error: #980404;
+  --accent: #3c8dbc;
+	--accent-hover: #307197;
+  --accent-light: #00c0ef;
+  --success: #00a65a;
+  --success-hover: #008d4c;
+  --error: #dd4b39;
+  --error-hover: #d73925;
+  --text-color: #212529;
+  --text-color-light: #636b6f;
+  --font-1: "Source Sans Pro", sans-serif;
 }
 `;
 
@@ -24,14 +23,13 @@ const code = `
     <ul class="colors__list">
       <ColorItem color="accent"/>
       <ColorItem color="accent-hover"/>
-      <ColorItem color="contrast"/>
-      <ColorItem color="contrast-hover"/>
-      <ColorItem color="dark-bg"/>
-      <ColorItem color="dark-bg-darken"/>
-      <ColorItem color="primary"/>
-      <ColorItem color="primary-hover"/>
+      <ColorItem color="accent-light"/>
       <ColorItem color="success"/>
       <ColorItem color="success-hover"/>
+      <ColorItem color="error"/>
+      <ColorItem color="error-hover"/>
+      <ColorItem color="text-color"/>
+      <ColorItem color="text-color-light"/>
     </ul>
   </div>
 </template>

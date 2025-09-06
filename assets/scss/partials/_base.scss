@@ -24,6 +24,8 @@ body {
   margin: 0;
   font-family: var(--font-1);
   font-size: 1.6rem;
+  color: var(--text-color);
+  background: white;
   &::after {
     content: '';
     position: absolute;
