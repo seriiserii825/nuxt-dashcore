@@ -72,5 +72,32 @@ const classes = computed(() => {
       border-color: #204d74;
     }
   }
+  &.btn--success {
+    color: white;
+    background-color: #00a65a;
+    border-color: #008d4c;
+    &:hover {
+      background-color: #008d4c;
+      border-color: #005729;
+    }
+  }
+  &.btn--info {
+    color: white;
+    background-color: #00c0ef;
+    border-color: #00acd6;
+    &:hover {
+      background-color: #00acd6;
+      border-color: #0073b7;
+    }
+  }
+  &.btn--error {
+    color: white;
+    background-color: #dd4b39;
+    border-color: #d73925;
+    &:hover {
+      background-color: #d73925;
+      border-color: #b52b27;
+    }
+  }
 }
 </style>

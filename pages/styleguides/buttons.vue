@@ -1,17 +1,39 @@
-<script setup></script>
+<script setup>
+definePageMeta({
+  layout: "styleguides",
+});
+</script>
 <template>
   <div class="buttons">
-    <UiBtn color="primary">Primary</UiBtn>
-    <UiBtn color="primary">
-      <FontAwesomeIcon icon="fas fa-download" />
-    </UiBtn>
+    <div class="buttons__row">
+      <UiBtn color="primary">Primary</UiBtn>
+      <UiBtn color="primary">
+        <FontAwesomeIcon icon="fas fa-download" />
+      </UiBtn>
+      <UiBtn color="primary">
+        <FontAwesomeIcon icon="fas fa-plus" />
+        Nuovo utente
+      </UiBtn>
+    </div>
+    <div class="buttons__row">
+      <UiBtn color="success">Success</UiBtn>
+    </div>
+    <div class="buttons__row">
+      <UiBtn color="info">Info</UiBtn>
+    </div>
+    <div class="buttons__row">
+      <UiBtn color="error">Error</UiBtn>
+    </div>
   </div>
 </template>
 <style lang="scss" scoped>
 .buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.6rem;
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+    margin-bottom: 1.6rem;
+  }
   &__title {
     margin-bottom: 2rem;
   }

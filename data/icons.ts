@@ -19,4 +19,5 @@ export const icons: IconTuple[] = [
   { key: "fas", label: "fa-users" },
   { key: "fab", label: "fa-glide" },
   { key: "fas", label: "fa-download" },
+  { key: "fas", label: "fa-plus" },
 ];
