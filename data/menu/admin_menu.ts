@@ -10,7 +10,7 @@ export const admin_menu: MenuNode[] = [
         icon: ["faw", "fa-user"],
         children: [
           { label: "Elenco Utenti", to: "/core_users", icon: ["faw", "fa-list"] },
-          { label: "Grupi", to: "/core_groups", icon: ["faw", "fw fa-users"] },
+          { label: "Grupi", to: "/core_groups", icon: ["faw", "fa-users"] },
         ]
       },
       {
