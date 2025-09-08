@@ -8,7 +8,10 @@ export const admin_menu: MenuNode[] = [
       {
         label: "Utenti",
         icon: ["faw", "fa-user"],
-        to: "/core_users",
+        children: [
+          { label: "Elenco Utenti", to: "/core_users", icon: ["faw", "fa-list"] },
+          { label: "Grupi", to: "/core_groups", icon: ["faw", "fw fa-users"] },
+        ]
       },
       {
         label: "Menu",

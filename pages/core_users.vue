@@ -2,8 +2,8 @@
 import {useAdminStore} from '~/store/useAdminStore';
 
 const admin_store = useAdminStore();
-admin_store.setLevelOne('Gruppi');
-admin_store.setLevelTwo('Elenco gruppi');
+admin_store.setLevelOne('Utenti');
+admin_store.setLevelTwo('Elenco utenti');
 </script>
 
 <template>

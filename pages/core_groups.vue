@@ -2,12 +2,12 @@
 import {useAdminStore} from '~/store/useAdminStore';
 
 const admin_store = useAdminStore();
-admin_store.setLevelOne('Menu');
-admin_store.setLevelTwo('Elenco menu');
+admin_store.setLevelOne('Gruppi');
+admin_store.setLevelTwo('Elenco gruppi');
 </script>
 
 <template>
-  <div class="core-users">
-    <h1>Core Menus Component</h1>
+  <div class="dashboard">
+    <h2>Dashboard page</h2>
   </div>
 </template>
