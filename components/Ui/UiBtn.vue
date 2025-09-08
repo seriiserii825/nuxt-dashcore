@@ -1,6 +1,6 @@
 <script setup lang="ts">
-const emits = defineEmits(["click_emit"]);
-type ButtonClassNames = "btn-primary" | "btn-secondary" | "btn-success" | "btn-danger" | "btn-warning" | "btn-info" | "btn-light" | "btn-dark";
+import type { PropType } from "vue";
+
 const props = defineProps({
   outline: {
     type: Boolean,
@@ -23,16 +23,17 @@ const props = defineProps({
     required: false,
     default: null,
   },
-  class_names: {
-    type: String as PropType<ButtonClassNames>,
+  color: {
+    type: String as PropType<"primary" | "secondary" | "success" | "danger" | "warning" | "info">,
     required: false,
-    default: "",
-  }
+    default: "primary",
+  },
 });
 const classes = computed(() => {
   return [
     "btn",
-    props.outline ? "btn--outline" : "btn--filled",
+    `btn--${props.color}`,
+    props.outline ? "btn--outline" : "",
     props.disabled ? "btn--disabled" : "",
     props.hidden ? "btn--hidden" : "",
     props.small ? "btn--small" : "",
@@ -58,8 +59,18 @@ const classes = computed(() => {
   text-align: center;
   user-select: none;
   white-space: nowrap;
+  transition: all .4s;
   border: 1px solid transparent;
   border-radius: 4px;
   cursor: pointer;
+  &.btn--primary {
+    color: white;
+    background-color: #3c8dbc;
+    border-color: #367fa9;
+    &:hover {
+      background-color: #367fa9;
+      border-color: #204d74;
+    }
+  }
 }
 </style>

@@ -10,7 +10,7 @@ const props = defineProps({
   },
 });
 
-const icon_code = `<FontAwesomeIcon :icon="${props.icon.key} ${props.icon.label}" />`;
+const icon_code = `<FontAwesomeIcon icon="${props.icon.key} ${props.icon.label}" />`;
 function copyToBuffer(text: string) {
   navigator.clipboard.writeText(text);
   useSweetAlert('success', 'Copied to clipboard', icon_code);

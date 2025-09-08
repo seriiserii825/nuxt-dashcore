@@ -1,15 +1,17 @@
-<script setup>
-import { UiBtn } from "#components";
-</script>
+<script setup></script>
 <template>
   <div class="buttons">
-    <div class="buttons__item">
-      <UiBtn>Default Button</UiBtn>
-    </div>
+    <UiBtn color="primary">Primary</UiBtn>
+    <UiBtn color="primary">
+      <FontAwesomeIcon icon="fas fa-download" />
+    </UiBtn>
   </div>
 </template>
 <style lang="scss" scoped>
 .buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
   &__title {
     margin-bottom: 2rem;
   }
