@@ -10,7 +10,7 @@ const props = defineProps({
   },
 });
 
-const is_logout_visible = ref(true);
+const is_logout_visible = ref(false);
 </script>
 
 <template>
