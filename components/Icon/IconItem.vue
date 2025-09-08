@@ -10,23 +10,17 @@ const props = defineProps({
   },
 });
 
-const icon_code = `<FontAwesomeIcon v-if="!copied" :icon="${props.icon.key} ${props.icon.label}" />`;
-const copied = ref(false);
+const icon_code = `<FontAwesomeIcon :icon="${props.icon.key} ${props.icon.label}" />`;
 function copyToBuffer(text: string) {
   navigator.clipboard.writeText(text);
-  copied.value = true;
-  useSweetAlert('success', 'Copied to clipboard');
-  setTimeout(() => {
-    copied.value = false;
-  }, 1000);
+  useSweetAlert('success', 'Copied to clipboard', icon_code);
 }
 </script>
 <template>
   <div class="icons-view-item" :title="`${icon.key} ${icon.label}`" @click="copyToBuffer(icon_code)">
     <div class="icons-view__wrap">
       <div class="icons-view__icon">
-        <FontAwesomeIcon v-if="!copied" :icon="`${icon.key} ${icon.label}`" />
-        <span v-else>copied</span>
+        <FontAwesomeIcon  :icon="`${icon.key} ${icon.label}`" />
       </div>
     </div>
   </div>
