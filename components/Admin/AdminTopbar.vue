@@ -20,11 +20,9 @@ const admin_store = useAdminStore();
 .admin-topbar {
   display: flex;
   align-items: center;
-  padding: 15px 20px;
+  padding: 1.5rem 4rem 1.5rem 2rem;
   height: 8rem;
   color: #444;
-  background: #fff;
-  border-bottom: 1px solid #d2d6de;
   &__title {
     display: flex;
     align-items: center;
