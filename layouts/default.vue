@@ -1,10 +1,17 @@
+<script setup lang="ts">
+import IBurger from "~/icons/IBurger.vue";
+</script>
+
 <template>
   <div class="default-layout">
     <div class="default-layout__sidebar">
       <AdminSidebar />
     </div>
     <div class="default-layout__main">
-      <div class="default-layout__topbar"></div>
+      <div class="default-layout__topbar">
+        <IBurger />
+        <h1>Admin Panel</h1>
+      </div>
       <div class="default-layout__content">
         <slot />
       </div>
@@ -29,6 +36,26 @@
     flex-direction: column;
     justify-content: space-between;
     background: var(--admin-bg);
+  }
+  &__topbar {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    height: 8rem;
+    color: #444;
+    background: #fff;
+    border-bottom: 1px solid #d2d6de;
+    h1 {
+      margin: 0 0 0 15px;
+      font-size: 2rem;
+      font-weight: 400;
+    }
+    svg {
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+      fill: var(--text-dark);
+    }
   }
   &__content {
     flex: 1;

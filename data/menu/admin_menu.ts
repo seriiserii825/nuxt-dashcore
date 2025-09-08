@@ -2,11 +2,6 @@ import type { MenuNode } from "~/components/Menu/MenuItem.vue";
 
 export const admin_menu: MenuNode[] = [
   {
-    label: "Dashboard",
-    icon: ["fas", "fa-house-lock"],
-    to: "/home",
-  },
-  {
     label: "ADMIN",
     icon: ["fas", "gear"],
     children: [
