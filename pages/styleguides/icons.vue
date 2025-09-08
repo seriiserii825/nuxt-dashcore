@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { IconItem } from "#components";
 import { icons } from "~/data/icons";
 
 definePageMeta({
@@ -17,7 +16,7 @@ definePageMeta({
 <style lang="scss" scoped>
 .icons-view__wrap {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
   grid-gap: 2rem;
 }
 </style>

@@ -1,26 +1,30 @@
 <script setup lang="ts">
 import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome';
+import type {PropType} from 'vue';
+import type {IconTuple} from '~/data/icons';
 
 const props = defineProps({
   icon: {
-    type: Array,
+    type: Object as PropType<IconTuple>,
     required: true,
   },
 });
 
-const icon_code = `<font-awesome-icon icon="${props.icon}"/>`;
-const array_code = `<font-awesome-icon icon="${props.icon}"/>`;
+const icon_code = `<FontAwesomeIcon v-if="!copied" :icon="${props.icon.key} ${props.icon.label}" />`;
 const copied = ref(false);
 function copyToBuffer(text: string) {
   navigator.clipboard.writeText(text);
   copied.value = true;
+  setTimeout(() => {
+    copied.value = false;
+  }, 1000);
 }
 </script>
 <template>
-  <div class="icons-view-item" @click="copyToBuffer">
+  <div class="icons-view-item" :title="`${icon.key} ${icon.label}`" @click="copyToBuffer(icon_code)">
     <div class="icons-view__wrap">
       <div class="icons-view__icon">
-        <FontAwesomeIcon v-if="!copied" :icon="`${icon[0]} ${icon[1]}`" />
+        <FontAwesomeIcon v-if="!copied" :icon="`${icon.key} ${icon.label}`" />
         <span v-else>copied</span>
       </div>
     </div>
@@ -31,7 +35,7 @@ function copyToBuffer(text: string) {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem 0;
+  padding: 1rem 0;
   border: 1px solid #333;
   cursor: pointer;
   transition: all 0.4s;
