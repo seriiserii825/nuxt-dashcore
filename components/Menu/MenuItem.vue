@@ -103,6 +103,7 @@ function toggle() {
   .menu-item--depth-1 > .menu-item__link,
   &__button {
     display: flex;
+    align-items: center;
     padding: 0.8rem 3.2rem;
     width: 100%;
     font-size: 1.8rem;

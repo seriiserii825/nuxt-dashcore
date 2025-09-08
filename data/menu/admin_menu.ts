@@ -2,6 +2,11 @@ import type { MenuNode } from "~/components/Menu/MenuItem.vue";
 
 export const admin_menu: MenuNode[] = [
   {
+    label: "Dashboard",
+    icon: ["fas", "fa-house-lock"],
+    to: "/admin",
+  },
+  {
     label: "ADMIN",
     icon: ["fas", "gear"],
     children: [
@@ -15,8 +20,16 @@ export const admin_menu: MenuNode[] = [
         icon: ["faw", "list-alt"],
         children: [
           { label: "Pagine", to: "/admin/core_menus", icon: ["fa", "folder-open"] },
-          { label: "Autorizzazioni", to: "/admin/core_permissions_general", icon: ["fa", "unlock-alt"] },
-          { label: "Eccezioni", to: "/admin/core_permissions_exceptions", icon: ["fa", "fa-asterisk"] },
+          {
+            label: "Autorizzazioni",
+            to: "/admin/core_permissions_general",
+            icon: ["fa", "unlock-alt"],
+          },
+          {
+            label: "Eccezioni",
+            to: "/admin/core_permissions_exceptions",
+            icon: ["fa", "fa-asterisk"],
+          },
         ],
       },
       {
@@ -39,5 +52,10 @@ export const admin_menu: MenuNode[] = [
     label: "Clienti",
     icon: ["fas", "fa-users"],
     to: "/admin/core_customers",
-  }
+  },
+  {
+    label: "Style guides",
+    icon: ["fab", "fa-glide"],
+    to: "/admin/styleguides",
+  },
 ];
