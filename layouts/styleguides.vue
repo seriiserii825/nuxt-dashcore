@@ -10,7 +10,8 @@
         label="Forms"
         icon="fa-user-secret"
         :items="[
-          { title: 'Icons', url: '/styleguides' },
+          { title: 'Colors', url: '/styleguides' },
+          { title: 'Icons', url: '/styleguides/icons' },
           { title: 'Buttons', url: '/styleguides/buttons' },
           { title: 'Checkbox', url: '/styleguides/checkox' },
           { title: 'Radio', url: '/styleguides/radio' },
