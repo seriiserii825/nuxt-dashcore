@@ -4,7 +4,7 @@ export const admin_menu: MenuNode[] = [
   {
     label: "Dashboard",
     icon: ["fas", "fa-house-lock"],
-    to: "/admin",
+    to: "/home",
   },
   {
     label: "ADMIN",
@@ -13,21 +13,21 @@ export const admin_menu: MenuNode[] = [
       {
         label: "Utenti",
         icon: ["faw", "fa-user"],
-        to: "/admin/core_users",
+        to: "/core_users",
       },
       {
         label: "Menu",
         icon: ["faw", "list-alt"],
         children: [
-          { label: "Pagine", to: "/admin/core_menus", icon: ["fa", "folder-open"] },
+          { label: "Pagine", to: "/core_menus", icon: ["fa", "folder-open"] },
           {
             label: "Autorizzazioni",
-            to: "/admin/core_permissions_general",
+            to: "/core_permissions_general",
             icon: ["fa", "unlock-alt"],
           },
           {
             label: "Eccezioni",
-            to: "/admin/core_permissions_exceptions",
+            to: "/core_permissions_exceptions",
             icon: ["fa", "fa-asterisk"],
           },
         ],
@@ -36,26 +36,26 @@ export const admin_menu: MenuNode[] = [
         label: "Indirizzi",
         icon: ["faw", "fa-envelope"],
         children: [
-          { label: "Nazioni", to: "/admin/core_countries", icon: ["faw", "fa-globe"] },
-          { label: "Province", to: "/admin/core_provinces", icon: ["fa", "fa-map-marker"] },
-          { label: "Comuni", to: "/admin/core_cities", icon: ["fa", "fa-university"] },
+          { label: "Nazioni", to: "/core_countries", icon: ["faw", "fa-globe"] },
+          { label: "Province", to: "/core_provinces", icon: ["fa", "fa-map-marker"] },
+          { label: "Comuni", to: "/core_cities", icon: ["fa", "fa-university"] },
         ],
       },
       {
         label: "Admin options",
         icon: ["faw", "fa-paperclip"],
-        to: "/admin/core_admin_options",
+        to: "/core_admin_options",
       },
     ],
   },
   {
     label: "Clienti",
     icon: ["fas", "fa-users"],
-    to: "/admin/core_customers",
+    to: "/core_customers",
   },
   {
     label: "Style guides",
     icon: ["fab", "fa-glide"],
-    to: "/admin/styleguides",
+    to: "/styleguides",
   },
 ];

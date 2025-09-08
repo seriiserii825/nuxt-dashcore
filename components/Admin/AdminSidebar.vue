@@ -4,7 +4,9 @@ import { admin_menu } from "~/data/menu/admin_menu";
 
 <template>
   <div class="admin-sidebar">
-    <img src="/images/app_header_logo.png" alt="" class="admin-sidebar__logo" />
+    <NuxtLink to="/home" class="admin-sidebar__logo">
+    <img src="/images/app_header_logo.png" alt="" />
+    </NuxtLink>
     <!-- <FontAwesomeIcon :icon="['fas', 'coffee']" /> -->
     <nav class="main-menu">
       <ul class="menu-list">
