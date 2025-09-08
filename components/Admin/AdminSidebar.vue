@@ -21,6 +21,7 @@ import { admin_menu } from "~/data/menu/admin_menu";
   height: 100%;
   background-color: #26374c;
   &__logo {
+    display: block;
     margin-bottom: 3.2rem;
     padding: 0 3.2rem;
   }
