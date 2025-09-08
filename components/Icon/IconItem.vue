@@ -15,6 +15,7 @@ const copied = ref(false);
 function copyToBuffer(text: string) {
   navigator.clipboard.writeText(text);
   copied.value = true;
+  useSweetAlert('success', 'Copied to clipboard');
   setTimeout(() => {
     copied.value = false;
   }, 1000);
