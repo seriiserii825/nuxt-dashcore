@@ -12,7 +12,7 @@
         :items="[
           { title: 'Icons', url: '/styleguides' },
           { title: 'Buttons', url: '/styleguides/buttons' },
-          { title: 'Checkbox', url: '/styleguides/checkbox' },
+          { title: 'Checkbox', url: '/styleguides/checkox' },
           { title: 'Radio', url: '/styleguides/radio' },
           { title: 'Inut', url: '/styleguides/input' },
           { title: 'Select', url: '/styleguides/select' },
