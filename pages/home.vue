@@ -1,4 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import {useAdminStore} from '~/store/useAdminStore';
+
+const admin_store = useAdminStore();
+admin_store.setLevelOne('Dashboard');
+</script>
 
 <template>
   <div class="dashboard">

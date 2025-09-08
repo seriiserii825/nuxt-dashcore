@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import IBurger from "~/icons/IBurger.vue";
+import { useAdminStore } from "~/store/useAdminStore";
+const admin_store = useAdminStore();
 </script>
 
 <template>
@@ -10,7 +12,10 @@ import IBurger from "~/icons/IBurger.vue";
     <div class="default-layout__main">
       <div class="default-layout__topbar">
         <IBurger />
-        <h1>Admin Panel</h1>
+        <h1>
+          <span>{{ admin_store.level_1 }}</span>
+          <small v-if="admin_store.level_2">{{ admin_store.level_2 }}</small>
+        </h1>
       </div>
       <div class="default-layout__content">
         <slot />
@@ -46,9 +51,21 @@ import IBurger from "~/icons/IBurger.vue";
     background: #fff;
     border-bottom: 1px solid #d2d6de;
     h1 {
-      margin: 0 0 0 15px;
-      font-size: 2rem;
-      font-weight: 400;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin: 0 0 0 3.2rem;
+      span {
+        font-size: 2rem;
+        font-weight: 600;
+        color: var(--text-dark);
+      }
+      small {
+        position: relative;
+        top: 0.2rem;
+        font-size: 1.5rem;
+        font-weight: 400;
+      }
     }
     svg {
       width: 24px;
