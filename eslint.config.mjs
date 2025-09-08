@@ -5,7 +5,12 @@ export default withNuxt([
   {
     rules: {
       "vue/html-self-closing": "off",
-      "vue/prop-name-casing": "off"
+      "vue/prop-name-casing": "off",
+    },
+    languageOptions: {
+      globals: {
+        defineModel: "readonly",
+      },
     },
   },
 ]);
